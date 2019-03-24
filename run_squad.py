@@ -563,7 +563,7 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
   batch_size = final_hidden_shape[0]
   seq_length = final_hidden_shape[1]
   hidden_size = final_hidden_shape[2]
-
+  print('*****hiddensize******',hidden_size)
   output_weights = tf.get_variable(
       "cls/squad/output_weights", [2, hidden_size],
       initializer=tf.truncated_normal_initializer(stddev=0.02))
